@@ -38,8 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "chai",
-]
+    'tailwind',
+    'theme',
 
+]
+TAILWIND_APP_NAME = 'theme' # This is the name of the app that will be used to generate the tailwind files
+INTERNAL_IPS = ['127.0.0.1']
+
+NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
