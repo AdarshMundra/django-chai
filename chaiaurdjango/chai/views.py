@@ -1,7 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render ,get_object_or_404
 from .models import ChaiVarity
+
 # Create your views here.
 def chai(request):
     chais = ChaiVarity.objects.all()
     print(chais)
     return render(request,"chai/all_chai.html",{'chais':chais})
+
+
+def chai_details(request,chai_id):
+    chai = get_object_or_404(ChaiVarity, pk=chai_id)
+    return render(request, 'chai/chai-details.html', {'chai': chai})

@@ -5,11 +5,14 @@
 {% endblock %}
 
 {% block content %}
+<div class =" text-center grid grid-cols-3 m-4">
   {% for chai in chais %}
     <div>
       <img src="{{ chai.image.url }}" alt="" srcset="">
       <h3>{{ chai.name }}</h3>
-    {% comment %} <p>{{ chai.description }}</p> {% endcomment %}
+    <p>{{ chai.description }}</p>
+    <a href="{% url 'chai_detail' chai.id %}">Details</a>
     </div>
   {% endfor %}
+</div>
 {% endblock %}
