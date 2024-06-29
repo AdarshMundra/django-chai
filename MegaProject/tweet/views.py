@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404, redirect
+
 from .models import Tweet
 from .forms import Tweetform
-from django.shortcuts import get_object_or_404, redirect
 
 
 # Create your views here.
