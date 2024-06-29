@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tailwind',
     'megatheme',
-    "django_browser_reload"
+    "django_browser_reload",
+    "tweet"
 ]
 # This is the name of the app that will be used to generate the tailwind files
 TAILWIND_APP_NAME = 'megatheme'
