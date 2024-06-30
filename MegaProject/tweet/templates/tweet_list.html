@@ -4,6 +4,23 @@ Chai or tweet
 {% endblock %}
 {% block content %}
 <h1 class="text-4xl text-center m-4 p-2">Chai with adarsh</h1>
-<a class="btn btn-primary" href="{% url 'tweet_create'%}">create tweet</a>
+<a class="btn btn-primary m-4" href="{% url 'tweet_create'%}">create tweet</a>
+
+<div class="container row gap-3">
+    {% for tweet in tweets %}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{tweet.photo.url}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{tweet.user.username}}</h5>
+          <p class="card-text">{{tweet.text}}</p>
+          <a href="{% url 'tweet_edit' tweet.id %}" class="btn btn-primary">Edit</a>
+          <a href="{% url 'tweet_delete' tweet.id%}" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+    <div>{{tweet}}</div>
+{% endfor %}        
+
+</div>   
+
 
 {% endblock %}
