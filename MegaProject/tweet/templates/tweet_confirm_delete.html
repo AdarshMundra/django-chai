@@ -4,11 +4,11 @@ Chai or tweet
 {% endblock %}
 {% block content %}
 <h1 class="text-4xl text-center m-4 p-2">Are you sure</h1>
-    <form method="post"></form>
+    <form method="post">
     {% csrf_token %}
     <p class="card-text">{{tweet.text}}</p>
     <button class="btn btn-danger">sure</button>
-    <a href="{% url "tweet_list" %}" class="btn btn-sucess">cancel</a>
+    <a class="btn btn-sucess" href="{% url 'tweet_list' %}" >cancel</a>
 </form>
     
 
